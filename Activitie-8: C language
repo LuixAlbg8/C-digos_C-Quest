@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double num, raiz;
+
+    printf("Digite um número: ");
+    scanf("%lf", &num);
+
+    if (num < 0) {
+    printf("Erro: não é possível calcular a raiz quadrada de um número negativo.\n");
+    } else {
+     
+   raiz = sqrt(num);
+   printf("A raiz quadrada de %.2f é: %.2f\n", num, raiz);
+    }
+
+    return 0;
+}
