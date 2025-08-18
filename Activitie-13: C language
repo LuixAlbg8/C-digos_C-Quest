@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int quantidade;
+    float somaNotasPonderadas = 0.0, somaPesos = 0.0;
+
+    printf("Quantas notas você deseja inserir? ");
+    scanf("%d", &quantidade);
+
+    float nota, peso;
+
+    for (int i = 1; i <= quantidade; i++) {
+    printf("Digite a nota %d: ", i);
+    scanf("%f", &nota);
+    printf("Digite o peso da nota %d: ", i);
+    scanf("%f", &peso);
+
+    somaNotasPonderadas += nota * peso;
+    somaPesos += peso;
+    }
+
+    if (somaPesos != 0) {
+    float media_ponderada = somaNotasPonderadas / somaPesos;
+    printf("A média ponderada é: %.2f\n", media_ponderada);
+    } else {
+    printf("Soma dos pesos inválida (zero). Impossível calcular a média.\n");
+    }
+
+    return 0;
+}
