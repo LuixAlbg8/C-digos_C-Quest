@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int matriz[3][2];
+    int i, j;
+    int contador_pares = 0;
+
+    
+    printf("Digite os elementos da matriz 3x2:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+
+            
+            if (matriz[i][j] % 2 == 0) {
+                contador_pares++;
+            }
+        }
+    }
+
+    
+    printf("\nQuantidade de números pares digitados: %d\n", contador_pares);
+
+    return 0;
+}
