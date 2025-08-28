@@ -1,0 +1,31 @@
+#include <stdio.h>
+  int main() {
+  int a = 0;
+  int i, j;
+  int numero[6];
+ 
+ int matriz[2][3];
+
+printf("Formador de matrizes bidimensional 2x3:\n");
+  while(a < 6) {
+
+  printf("Ponha um número da matriz:\n");
+scanf("%d", &numero[a]);
+a++;
+}
+a = 0;
+for(i = 0; i < 2; i++) {
+for(j = 0; j < 3; j++) {
+matriz[i][j] = numero[a];
+a++;
+  }
+}
+printf("Matriz finalizada:\n");
+for(i = 0; i < 2; i++) {
+for(j = 0; j < 3; j++) {
+printf("%d ", matriz[i][j]);
+}
+printf("\n");
+}
+return 0;
+}
